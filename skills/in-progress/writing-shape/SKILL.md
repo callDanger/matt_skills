@@ -1,64 +1,64 @@
 ---
 name: writing-shape
-description: Take a markdown file of raw material and shape it into an article through a conversational session — drafting candidate openings, growing the piece paragraph by paragraph, arguing about format (lists, tables, callouts, quotes) at each step. Use when the user has a pile of notes, fragments, or a rough draft and wants help turning it into something publishable.
+description: 获取一份原始素材的 markdown 文件，通过一次对话会话将其塑造成一篇文章——起草 2–3 个候选开头，逐段扩展文章，并在每一步讨论格式选择（列表、表格、标注、引用）。适用于用户有一堆笔记、片段或粗略草稿，希望帮忙整理成可发布内容的情况。
 ---
 
 <what-to-do>
 
-The user has passed (or will pass) a markdown file of raw material. Treat it as the input pile — anything from a tidy list of fragments to a wall of unstructured prose to a transcript. The format does not matter. Read it end-to-end before doing anything else.
+用户已经（或即将）传入一份原始素材的 markdown 文件。将其视为输入素材堆——从整齐的片段列表，到一堵无结构散文墙，再到一份转录稿，任何形式都可以。格式并不重要。在做任何其他事情之前，先从头到尾通读一遍。
 
-Then run a shaping session that produces a separate article document. Do not edit the raw material file — it is read-only to this skill.
+然后开展一次塑形会话，产出一份独立的文章文档。不要编辑原始素材文件——对该技能而言它是只读的。
 
-If the user did not say where to save the article, ask once and remember the path. The user will be editing the article file during the session; always re-read it before writing so their edits are preserved.
+如果用户没有说明文章保存位置，询问一次并记住路径。用户会在会话期间编辑文章文件；每次写入前都要重新读取，以保留他们的修改。
 
 </what-to-do>
 
 <supporting-info>
 
-## The loop
+## 循环流程
 
-1. **Read the pile.** Read the input file in full. Form a sense of what's in it.
-2. **Draft 2–3 candidate openings.** Each opening should imply a different thesis or angle for the article. Show all of them. Force the user to pick or compose a hybrid. The chosen opening defines what the rest of the article must do.
-3. **Grow paragraph by paragraph.** After the opening lands, ask "given this opening, what does the reader need to hear next?" Pull material from the pile to answer. Argue about whether the next beat is a paragraph, a list, a table, a callout, a quote, a code block. Each format choice should be deliberate and defensible.
-4. **Append to the article file as you go.** Don't batch. Write each agreed paragraph or block immediately so the user can see the article taking shape.
-5. **Loop step 3 until the article is done.** The user decides when it's done.
+1. **通读素材堆。** 完整读取输入文件。形成对其内容的整体感知。
+2. **起草 2–3 个候选开头。** 每个开头都应暗示文章不同的论点或角度。全部展示出来。迫使用户选择或组合出一个混合版本。选定的开头决定了文章其余部分必须完成什么。
+3. **逐段扩展。** 开头确定后，问自己：“基于这个开头，读者接下来需要听到什么？”从素材堆中抽取材料来回答。争论下一个节奏应该是段落、列表、表格、标注、引用还是代码块。每种格式选择都应有明确理由并能够辩护。
+4. **边写边追加到文章文件。** 不要批量处理。每敲定一个段落或块就立即写入，让用户看到文章逐渐成型。
+5. **循环步骤 3 直到文章完成。** 由用户决定何时结束。
 
-## Conversational feel
+## 对话氛围
 
-This is a grilling session inverted. In ideation, the question was "what are you actually noticing?" Here it's "what is this article actually arguing, and in what order does the reader need to hear it?" Push back. Refuse to let weak transitions slide. If a paragraph doesn't earn its place, cut it.
+这是一场反向的“拷问”会话。在创意构思阶段，问题是“你真正注意到的是什么？”而这里是“这篇文章到底在论证什么，读者需要以什么顺序听到它？”提出质疑。拒绝让软弱的过渡滑过去。如果一个段落没有存在的价值，删掉它。
 
-Specific moves to keep using:
+持续使用的具体话术：
 
-- "What does this paragraph do for the reader that the previous one didn't?"
-- "If I cut this, what breaks?"
-- "Is this prose, or should it be a list? Why prose?"
-- "This sentence is doing two jobs — split it or pick one."
-- "The opening promised X. We've drifted to Y. Either re-thread it or change the opening."
+- “这个段落为读者提供了前一个段落没有的东西，那是什么？”
+- “如果我把这段删掉，什么会崩坏？”
+- “这是散文，还是应该做成列表？为什么是散文？”
+- “这句话做了两件事——拆开它，或者只保留一件。”
+- “开头承诺了 X。我们已经漂到了 Y。要么把它重新串起来，要么改开头。”
 
-## Pulling from the pile
+## 从素材堆中抽取
 
-Treat the raw material as a quarry, not a script. Pull a fragment, rework it to fit the surrounding paragraph, and place it. A fragment may be split across multiple paragraphs, merged with another, or paraphrased. The pile's job is to be mined; the article's job is to read as one voice.
+把原始素材当作采石场，而不是剧本。抽出一段片段，改写以融入周围的段落，然后安放到位。一个片段可以拆分到多个段落，与另一个合并，或被转述。素材堆的任务是被开采；文章的任务是读起来像一个声音。
 
-If the pile lacks something the article needs, name the gap explicitly: "We need an example here and the pile doesn't have one — give me one now or we cut this section."
+如果素材堆缺少文章需要的内容，明确指出的缺口：“这里需要一个例子，但素材堆里没有——现在给我一个，否则我们就砍掉这一节。”
 
-## Format arguments to actually have
+## 真正要讨论的格式选择
 
-When choosing how to render a beat, weigh these tradeoffs out loud with the user, not silently:
+在选择如何呈现一个节奏时，大声与用户权衡以下取舍，而不是默默决定：
 
-- **Prose vs. list.** Prose carries argument; lists carry parallel items. If items aren't truly parallel, prose is better. If they are, a list is faster to scan.
-- **Inline vs. callout.** Tips, warnings, and asides go in callouts (`> [!TIP]`, `> [!NOTE]`) — but only if they'd genuinely derail the main argument inline. Otherwise leave them inline.
-- **Table vs. repeated structure.** If the same shape repeats 3+ times with the same fields, a table. Otherwise prose with bold leads.
-- **Quote vs. paraphrase.** Quote when the original wording is the point. Paraphrase when only the idea matters.
-- **Code block vs. inline code.** Multi-line, runnable, or illustrative → block. Single token or identifier → inline.
+- **散文 vs. 列表。** 散文承载论证；列表承载并列项。如果各项并非真正并列，散文更好。如果确实并列，列表扫描更快。
+- **内联 vs. 标注。** 提示、警告和题外话放入标注（`> [!TIP]`、`> [!NOTE]`）——但前提是它们真的会内联打断主要论证。否则就保留为内联。
+- **表格 vs. 重复结构。** 如果同一结构以相同字段重复出现 3 次以上，用表格。否则用加粗引导的散文。
+- **引用 vs. 转述。** 当原话才是重点时引用。当只有想法重要时转述。
+- **代码块 vs. 行内代码。** 多行、可运行或示例性内容 → 代码块。单个记号或标识符 → 行内。
 
-## Writing rhythm
+## 写作节奏
 
-Append to the article file as each block is agreed. Re-read the file from disk before every write — the user may have edited between turns. Never overwrite blindly. If the user wants a paragraph rewritten, edit that specific paragraph in place; leave the rest alone.
+每敲定一个块就追加到文章文件。每次写入前都要从磁盘重新读取文件——用户可能在两次回复之间编辑过。切勿盲目覆盖。如果用户想重写某个段落，只就地编辑该段落；其余部分保持不变。
 
-## Out of scope
+## 不在范围内
 
-- Mining for new fragments that aren't in the pile (the pile is the input — if it's incomplete, name the gap and either get the user to fill it or cut the section).
-- Editing the raw material file.
-- Publishing, formatting for a specific platform, or adding frontmatter the user didn't ask for.
+- 挖掘素材堆中没有的新片段（素材堆就是输入——如果它不完整，指出缺口，要么让用户补上，要么砍掉该节）。
+- 编辑原始素材文件。
+- 发布、为特定平台排版，或添加用户未要求的 frontmatter。
 
 </supporting-info>
